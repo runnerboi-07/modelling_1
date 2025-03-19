@@ -13,3 +13,7 @@
 * \_\_repr\_\_
 * \_\_gt\_\_ , \_\_eq\_\_ , ...
 4. Inheritance
+
+## Session 3:
+1. isinstance(,) to check type
+2. super() to access parent class
