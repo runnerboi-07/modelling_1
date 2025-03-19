@@ -15,19 +15,20 @@ class ColourPoint(Point):
     def __str__(self):
         return f"<{self.colour}: {self.x}, {self.y}>"
 
-p = ColourPoint(1, 2, "red")
+if __name__ == "__main__":
+    p = ColourPoint(1, 2, "red")
 
-print(p.distance_to_orig())
-print(p)
-# colours = ["red", "green", "blue", "yellow", "black", "magenta",
-#            "cyan", "white", "burgundy", "periwinkle", "marsala"]
-# colour_points = []
-# for i in range(10):
-#     colour_points.append(
-#         ColourPoint(random.randint(-10, 10),
-#                     random.randint(-10, 10),
-#                     random.choice(colours)))
-#
-# print(colour_points)
-# colour_points.sort()
-# print(colour_points)
+    print(p.distance_to_orig())
+    print(p)
+    # colours = ["red", "green", "blue", "yellow", "black", "magenta",
+    #            "cyan", "white", "burgundy", "periwinkle", "marsala"]
+    # colour_points = []
+    # for i in range(10):
+    #     colour_points.append(
+    #         ColourPoint(random.randint(-10, 10),
+    #                     random.randint(-10, 10),
+    #                     random.choice(colours)))
+    #
+    # print(colour_points)
+    # colour_points.sort()
+    # print(colour_points)
