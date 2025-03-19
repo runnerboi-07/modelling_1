@@ -21,4 +21,4 @@
 * Regular Methods
 * Class Methods
 * Static Methods
-* Property
+* Property - Getter & Setter
