@@ -17,3 +17,8 @@
 ## Session 3:
 1. isinstance(,) to check type
 2. super() to access parent class
+3. Methods
+* Regular Methods
+* Class Methods
+* Static Methods
+* Property
