@@ -1,6 +1,6 @@
 import random
 
-class Point:
+class Point: # class naming convention - first letter should be capital
     def __init__(self, x, y): # defines instance of 'Point'; automatically called
         # self = instance of point that we are instantiating
         # init is a magic method/dunder
@@ -9,8 +9,8 @@ class Point:
         :param x: the x position on the axis
         :param y: the y position on the axis
         """
-        self.x = x # define x attribute via self.x
-        self.y = y # & assign the value of x to it
+        self.x = x # define x attribute via self.x & assign the value of x to it
+        self.y = y # using self.x & self.y helps to store the values of the parameters x & y to the object for later use
 
     def __str__(self):
         """
@@ -19,18 +19,36 @@ class Point:
         """
         return f"<x={self.x}, y={self.y}>"
 
-    def __repr__(self):
+    def __repr__(self): # distinction between __repr__ and __str__ based on internet research seems to be that __repr__ covers when object name directly typed into console; __repr__ more expansive
+        """
+        'Representation' dunder that defines how object looks when printed
+        :return: same output as str
+        """
         return self.__str__() # use same way of printing as str
 
     def distance_to_orig(self):
+        """
+        Formula for distance of point from the origin (0, 0)
+        :return: result of distance formula
+        """
         return (self.x**2 + self.y**2)**0.5 # distance formula; square root of the sum of x & y squared
 
-    def __gt__(self, other): # comparing self w/ other point
+    def __gt__(self, other): # comparing self with other point; 'greater than' dunder to compare
+        """
+        'Greater than' dunder method to compare self (the instance) with another point
+        :param other: coordinates of other point
+        :return: comparison as boolean output
+        """
         my_distance = self.distance_to_orig()
         other_distance = other.distance_to_orig()
         return my_distance > other_distance
 
     def __eq__(self, other):
+        """
+        'Equal to' dunder method to compare self (the instance) with another chosen point; works similar to __gt__
+        :param other: coordinates of the other point
+        :return: comparison as boolean output
+        """
         my_distance = self.distance_to_orig()
         other_distance = other.distance_to_orig()
         return my_distance == other_distance

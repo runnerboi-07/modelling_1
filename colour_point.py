@@ -3,7 +3,12 @@ import random
 
 class ColourPoint(Point):
     def __init__(self, x, y, colour):
-        # raise an exception if person tries to enter not a number
+        """
+        Initialises a ColourPoint object + Raises an exception if person tries to enter not a number
+        :param x: x coordinate as an integer or float
+        :param y: y coordinate as an integer or float
+        :param colour: name of the colour as a string
+        """
         if not isinstance(x, (int, float)): # x, tuple; isinstance asks what is the type of x
             raise TypeError("x must be a number")
         if not isinstance(y, (int, float)):
@@ -13,6 +18,10 @@ class ColourPoint(Point):
         self.colour = colour # edit __init__ & everything else carries over from Point
 
     def __str__(self):
+        """
+        Dunder to show how the object will look when printed
+        :return: print output
+        """
         return f"<{self.colour}: {self.x}, {self.y}>"
 
 if __name__ == "__main__":
